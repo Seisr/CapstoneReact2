@@ -229,12 +229,12 @@ const CreateTask = () => {
                 name="originalEstimate"
                 type="number"
                 min="0"
-                onChange={(event) => {
+                onChange={(value) => {
                   settimeTracking({
                     ...timeTracking,
-                    originalEstimate: event.target.value,
+                    originalEstimate: value,
                   });
-                  setFieldValue("originalEstimate", event.target.value);
+                  setFieldValue("originalEstimate", value);
                 }}
                 defaultValue="0"
               />
@@ -245,12 +245,12 @@ const CreateTask = () => {
                 name="timeTrackingSpent"
                 type="number"
                 min="0"
-                onChange={(event) => {
+                onChange={(value) => {
                   settimeTracking({
                     ...timeTracking,
-                    timeTrackingSpent: event.target.value,
+                    timeTrackingSpent: value,
                   });
-                  setFieldValue("timeTrackingSpent", event.target.value);
+                  setFieldValue("timeTrackingSpent", value);
                 }}
               />
             </div>
@@ -260,8 +260,8 @@ const CreateTask = () => {
                 id="timeTrackingRemaining"
                 name="timeTrackingRemaining"
                 type="number"
-                onChange={(event) => {
-                  setFieldValue("timeTrackingRemaining", event.target.value);
+                onChange={(value) => {
+                  setFieldValue("timeTrackingRemaining", value);
                 }}
               />
             </div>
@@ -318,7 +318,7 @@ const CreateTask = () => {
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3"
         >
-          Create project
+          Create Task
         </button>
       </div>
     </form>

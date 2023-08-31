@@ -229,7 +229,7 @@ const CreateTask = () => {
                 name="originalEstimate"
                 type="number"
                 min="0"
-                onChange={() => {
+                onChange={(event) => {
                   settimeTracking({
                     ...timeTracking,
                     originalEstimate: event.target.value,

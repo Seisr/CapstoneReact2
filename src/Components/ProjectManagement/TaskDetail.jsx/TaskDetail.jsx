@@ -439,7 +439,7 @@ const TaskDetail = ({ projectId }) => {
                     type="number"
                     min="0"
                     value={values.timeTrackingSpent}
-                    onChange={() => {
+                    onChange={(event) => {
                       settimeTracking({
                         ...timeTracking,
                         timeTrackingSpent: event.target.value,

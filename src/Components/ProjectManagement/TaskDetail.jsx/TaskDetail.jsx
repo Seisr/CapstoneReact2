@@ -333,7 +333,7 @@ const TaskDetail = ({ projectId }) => {
                 options={projectDetail.members
                   ?.filter((mem) => {
                     let index = taskDetail.assigness?.findIndex((us) => {
-                      us.id === mem.userId;
+                      return us.id === mem.userId;
                     });
                     if (index !== -1) {
                       return false;
@@ -455,7 +455,7 @@ const TaskDetail = ({ projectId }) => {
                     name="timeTrackingRemaining"
                     type="number"
                     value={values.timeTrackingRemaining}
-                    onChange={() => {
+                    onChange={(event) => {
                       setFieldValue(
                         "timeTrackingRemaining",
                         event.target.value
